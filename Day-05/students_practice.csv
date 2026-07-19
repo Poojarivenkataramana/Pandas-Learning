@@ -1,0 +1,16 @@
+student_id,name,age,city,score,grade
+1,Amit,21,Delhi,85,A
+2,Priya,,Mumbai,90,A
+3,Rahul,22,,78,B
+4,Sneha,20,Pune,,B
+5,Vikram,23,Chennai,88,A
+6,Amit,21,Delhi,85,A
+7,Neha,,Bangalore,,C
+8,Karan,24,,65,C
+9,Priya,22,Mumbai,90,A
+10,Rohan,21,Delhi,,B
+11,Sneha,20,Pune,72,B
+12,Anjali,,Hyderabad,95,A
+13,Vikram,23,Chennai,88,A
+14,Meera,25,Kolkata,80,B
+15,Karan,24,Jaipur,65,C
