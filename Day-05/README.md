@@ -1,39 +1,168 @@
-# 🐼 Pandas Day 5 – Handling Missing Values & Duplicates
+# 🐼 Pandas Learning – Day 05
 
-## 🎯 Today's Topics
+## 📚 Topics Covered
 
-Today we'll learn the most important data cleaning techniques in Pandas.
+Today I learned the following Pandas Data Cleaning concepts:
 
-### 📚 Topics Covered
-
-1. 📝 What are Missing Values?
+1. 📌 What are Missing Values?
 2. 🔍 `isnull()`
 3. ✅ `notnull()`
 4. 🛠️ `fillna()`
-5. 🗑️ `dropna()`
-6. 🔄 `replace()`
-7. 👥 `duplicated()`
-8. ❌ `drop_duplicates()`
 
 ---
 
-## 🎯 Learning Objectives
+# 1️⃣ What are Missing Values?
 
-By the end of this notebook, you will be able to:
+## 📖 Definition
+Missing values are empty or unavailable data in a dataset.
 
-- ✔️ Identify missing values in a dataset.
-- ✔️ Check non-missing values.
-- ✔️ Fill missing values using different techniques.
-- ✔️ Remove rows or columns containing missing values.
-- ✔️ Replace existing values with new values.
-- ✔️ Detect duplicate records.
-- ✔️ Remove duplicate rows from a DataFrame.
-- ✔️ Perform basic data cleaning using Pandas.
+Pandas represents missing values as **NaN (Not a Number).**
+
+## 📝 Syntax
+```python
+NaN
+```
+
+## 💡 Example
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({
+    "Name":["Ram","Rahul"],
+    "Age":[20,None]
+})
+```
+
+Output
+
+```
+   Name   Age
+0   Ram  20.0
+1 Rahul   NaN
+```
 
 ---
 
-## 📌 Dataset Used
+# 2️⃣ isnull()
 
-**Dataset:** `big_employee_data_Cleaned.csv`
+## 📖 Definition
 
-Let's get started! 🚀
+`isnull()` checks whether values are missing.
+
+Returns **True** for missing values and **False** otherwise.
+
+## 📝 Syntax
+
+```python
+df.isnull()
+```
+
+## 💡 Example
+
+```python
+df.isnull()
+```
+
+Output
+
+```
+    Name    Age
+0  False  False
+1  False   True
+```
+
+---
+
+# 3️⃣ notnull()
+
+## 📖 Definition
+
+`notnull()` checks whether values are available.
+
+Returns **True** for non-missing values and **False** for missing values.
+
+## 📝 Syntax
+
+```python
+df.notnull()
+```
+
+## 💡 Example
+
+```python
+df.notnull()
+```
+
+Output
+
+```
+    Name    Age
+0   True   True
+1   True  False
+```
+
+---
+
+# 4️⃣ fillna()
+
+## 📖 Definition
+
+`fillna()` replaces missing values with a specified value.
+
+## 📝 Syntax
+
+```python
+df.fillna(value)
+```
+
+## 💡 Example
+
+```python
+df.fillna(0)
+```
+
+Output
+
+```
+    Name   Age
+0    Ram   20
+1  Rahul    0
+```
+
+Another Example
+
+```python
+df["Age"] = df["Age"].fillna(df["Age"].mean())
+```
+
+---
+
+# 📌 Summary
+
+✅ Learned about Missing Values
+
+✅ Detected missing values using `isnull()`
+
+✅ Checked available values using `notnull()`
+
+✅ Filled missing values using `fillna()`
+
+---
+
+# 🚀 Next Topics
+
+- `dropna()`
+- `replace()`
+- `duplicated()`
+- `drop_duplicates()`
+
+---
+
+## ⭐ Day 05 Progress
+
+**Topics Covered:** 4
+
+**Topics Remaining:** 4
+
+**Status:** ✅ Completed
