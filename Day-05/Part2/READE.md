@@ -17,11 +17,11 @@ All examples below use a small employee dataset designed to contain duplicate ro
 import pandas as pd
 
 data = {
-    'EmpID':  ,
-    'Name':   ['Ravi', 'Anita', 'Kiran', 'Ravi', 'Meena', 'Arun', 'Anita', 'Divya'],
-    'Age':   ,[1][2][3][4][5]
-    'City':   ['Hyderabad', 'Chennai', 'Bangalore', 'Hyderabad', 'Pune', 'Delhi', 'Chennai', 'Mumbai'],
-    'Salary': 
+    'EmpID': [101, 102, 103, 101, 104, 105, 102, 106],
+    'Name': ['Ravi', 'Anita', 'Kiran', 'Ravi', 'Meena', 'Arun', 'Anita', 'Divya'],
+    'Age': [28, 25, 30, 28, 32, 27, 25, 29],
+    'City': ['Hyderabad', 'Chennai', 'Bangalore', 'Hyderabad', 'Pune', 'Delhi', 'Chennai', 'Mumbai'],
+    'Salary': [45000, 40000, 52000, 45000, 48000, 39000, 40000, 55000]
 }
 
 df = pd.DataFrame(data)
